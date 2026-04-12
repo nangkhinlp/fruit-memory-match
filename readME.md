@@ -21,7 +21,9 @@ in as few errors as possible. Your best score is saved between sessions.
 4. Matched pairs stay face-up. Mismatches flip back over.
 5. Win by matching all 10 pairs.
 
----
+## Wireframe
+
+![Wireframe](images/wireframe.png)
 
 ## Tech Used
 
