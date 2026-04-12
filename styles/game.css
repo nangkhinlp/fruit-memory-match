@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+
+:root {
+    --color-primary:    #e63946;
+    --color-secondary:  #457b9d;
+    --color-bg:         #f8f9fa;
+    --color-board-bg:   #ffffff;
+    --color-border:     #dee2e6;
+    --color-text:       #212529;
+    --color-success:    #2a9d8f;
+
+    --spacing-sm:       0.5rem;
+    --spacing-md:       1rem;
+    --spacing-lg:       2rem;
+
+    --card-width:       90px;
+    --card-height:      128px;
+    --card-gap:         5px;
+    --card-radius:      8px;
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+
+.navbar {
+    background-color: var(--color-primary);
+}
+
+.navbar-brand,
+.navbar .nav-link,
+.navbar .btn-link {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+
+.nav-item + .nav-item {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: var(--spacing-sm);
+}
+
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--card-gap);
+    background-color: var(--color-board-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--card-radius);
+    padding: var(--spacing-md);
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: var(--card-radius);
+    cursor: pointer;
+    object-fit: cover;
+
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+.card[alt="Hidden card — click to reveal"] {
+    border: 2px solid var(--color-secondary);
+}
+
+
+:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+
+#board .card:nth-child(even) {
+    filter: brightness(0.96);
+}
+
+
+section[aria-label="Game stats"] p {
+    font-size: 1.1rem;
+}
+
+section[aria-label="Game stats"] strong {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+    :root {
+        --card-width:  62px;
+        --card-height: 88px;
+        --card-gap:    3px;
+    }
+
+    #board {
+        padding: var(--spacing-sm);
+    }
+}
