@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Memory Match — Card Game</title>
 
-    <!-- Bootstrap 5 CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
-    <!-- Custom styles (after Bootstrap so overrides work) -->
     <link rel="stylesheet" href="styles/game.css">
 </head>
 <body>
 
-    <!-- NAVBAR — Bootstrap component #1
-         data-bs-toggle and data-bs-target wire up the mobile
-         hamburger collapse with zero JavaScript needed.
-    -->
     <header>
         <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
             <div class="container">
@@ -42,14 +36,13 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
-                            <!-- Wired to init() via event listener in game.js -->
                             <button class="nav-link btn btn-link" id="btn-play">
                                 Play / Reset
                             </button>
                         </li>
 
                         <li class="nav-item">
-                            <!-- data-bs-toggle opens the modal — no JS needed -->
+                        
                             <button
                                 class="nav-link btn btn-link"
                                 data-bs-toggle="modal"
@@ -66,13 +59,10 @@
         </nav>
     </header>
 
-
-    <!-- MODAL — Bootstrap component #2
-         data-bs-dismiss closes it automatically.
-    -->
     <div
         class="modal fade"
         id="howToPlayModal"
+        role="dialog"
         tabindex="-1"
         aria-labelledby="howToPlayLabel"
         aria-hidden="true"
@@ -107,10 +97,10 @@
     </div>
 
 
-    <!-- MAIN CONTENT -->
+    
     <main class="container py-4">
 
-        <!-- Stats bar -->
+        
         <section class="text-center mb-3" aria-label="Game stats">
             <div class="d-flex justify-content-center gap-4 flex-wrap">
                 <p class="mb-0">Errors: <strong id="errors" aria-live="polite">0</strong></p>
@@ -119,12 +109,12 @@
             </div>
         </section>
 
-        <!-- Game board -->
+        
         <section aria-label="Game board">
             <div id="board"></div>
         </section>
 
-        <!-- Settings form -->
+        
         <section class="mt-5" aria-label="Player settings">
             <h2 class="h5">Settings</h2>
 
@@ -157,7 +147,7 @@
 
                 <button type="submit" class="btn btn-primary">Save Settings</button>
 
-                <!-- Confirmation message shown after saving -->
+                
                 <p
                     id="settings-status"
                     class="mt-2 text-success"
@@ -168,10 +158,10 @@
         </section>
 
     </main>
-    <!-- Bootstrap JS bundle (needed for modal + navbar collapse) -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Game module — type="module" enables import/export -->
+
     <script type="module" src="./scripts/game.js"></script>
 
 </body>
