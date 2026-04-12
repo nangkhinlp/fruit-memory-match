@@ -73,11 +73,5 @@ and swap the cards
 
 ## Validation
 
-- [Nu Validator — Live Page](https://validator.w3.org/nu/?doc=https://YOUR-DEPLOYED-URL)
-- [WAVE Checker — Live Page](https://wave.webaim.org/report#/https://YOUR-DEPLOYED-URL)
-
----
-
-## Known Omissions
-
-None.
+- [Nu Validator — Live Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnangkhinlp.github.io%2Ffruit-memory-match%2F)
+- [WAVE Checker — Live Page](https://wave.webaim.org/report#/https://nangkhinlp.github.io/fruit-memory-match/)
