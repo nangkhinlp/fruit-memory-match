@@ -1,0 +1,14 @@
+{
+  "cardList": [
+    { "name": "papaya",     "img": "./images/papaya.jpg" },
+    { "name": "banana",     "img": "./images/banana.jpg" },
+    { "name": "orange",     "img": "./images/orange.jpg" },
+    { "name": "pineapple",  "img": "./images/pineappple.jpg" },
+    { "name": "cherry",     "img": "./images/cherry.jpg" },
+    { "name": "strawberry", "img": "./images/strawberry.jpg" },
+    { "name": "pear",       "img": "./images/pear.jpg" },
+    { "name": "raspberry",  "img": "./images/raspberry.jpg" },
+    { "name": "fig",        "img": "./images/fig.jpg" },
+    { "name": "grapes",     "img": "./images/grapes.jpg" }
+  ]
+}
