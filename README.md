@@ -29,30 +29,34 @@ The biggest hurdle was getting fetch and ES modules to play nicely together. Top
 - Storing just `errors` and `matches` in sessionStorage wasn't enough to actually resume a game — I needed the full board layout and a list of matched positions, which led to a `getCurrentState()` helper that snapshots the live game.
 
 ## Project Structure
-├── data
-│   └── data.json
-├── images
-│   ├── back.jpg
-│   ├── banana.jpg
-│   ├── cherry.jpg
-│   ├── fig.jpg
-│   ├── grapes.jpg
-│   ├── orange.jpg
-│   ├── papaya.jpg
-│   ├── pear.jpg
-│   ├── pineapple.jpg
-│   ├── raspberry.jpg
-│   ├── strawberry.jpg
-│   └── wireframe.png
-├── scripts
-│   ├── data.js
-│   ├── game.js
-│   ├── leaderboard.js
-│   └── storage.js
-├── styles
-│   └── game.css
-├── index.html
-└── README.md
+│   index.html
+│   README.md
+│
+├───data
+│       data.json
+│
+├───images
+│       back.jpg
+│       banana.jpg
+│       cherry.jpg
+│       fig.jpg
+│       grapes.jpg
+│       orange.jpg
+│       papaya.jpg
+│       pear.jpg
+│       pineapple.jpg
+│       raspberry.jpg
+│       strawberry.jpg
+│       wireframe.png
+│
+├───scripts
+│       data.js
+│       game.js
+│       leaderboard.js
+│       storage.js
+│
+└───styles
+        game.css
 
 ## Game Objective
 
