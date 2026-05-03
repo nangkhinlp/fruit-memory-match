@@ -20,7 +20,7 @@ I wanted to make this project more well-rounded.
 **What I improved**
 - Removed the hardcoded fruit array and put the data into an external JSON file fetched via the Fetch API
 - Added a leaderboard with live search and multi-criteria sort
-- Added a resumable game state — refreshing the tab restores the board exactly where the player left off
+- Added a resumable game state, refreshing the tab restores the board exactly where the player left off
 - Added Bootstrap modal for the Leaderboard
 - Used `@import` to integrate Normalize.css for cross-browser consistency
 
