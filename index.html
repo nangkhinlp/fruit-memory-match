@@ -52,12 +52,73 @@
                             </button>
                         </li>
 
+                        <li class = "nav-item">
+                            <button
+                                class="nav-link btn btn-link"
+                                data-bs-toggle="modal"
+                                data-bs-target="#leaderboardModal"
+                            >
+                                Leaderboard
+                            </button>
+                        </li>
+
                     </ul>
                 </div>
 
             </div>
         </nav>
     </header>
+
+<!-- Leaderboard Modal -->
+<div class="modal fade" id="leaderboardModal" tabindex="-1" aria-labelledby="leaderboardModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="modal-title h5" id="leaderboardModalLabel">🏆 Leaderboard</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Filter / sort controls -->
+        <div class="row g-2 mb-3">
+          <div class="col-md-7">
+            <input type="text" id="search-input" class="form-control" placeholder="Search player name…">
+          </div>
+          <div class="col-md-5">
+            <select id="sort-select" class="form-select">
+              <option value="errors-asc">Sort: Fewest errors</option>
+              <option value="errors-desc">Sort: Most errors</option>
+              <option value="newest">Sort: Newest first</option>
+              <option value="oldest">Sort: Oldest first</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th>Errors</th>
+              <th>Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body"></tbody>
+        </table>
+
+        <p id="empty-msg" class="text-muted">No scores yet. Play a game!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="clear-all" class="btn btn-outline-danger me-auto">Clear all</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
     <div
         class="modal fade"
@@ -136,15 +197,6 @@
                     </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="difficulty" class="form-label">Difficulty</label>
-                    <select id="difficulty" class="form-select">
-                        <option value="easy">Easy — cards shown longer</option>
-                        <option value="normal" selected>Normal</option>
-                        <option value="hard">Hard — cards shown briefly</option>
-                    </select>
-                </div>
-
                 <button type="submit" class="btn btn-primary">Save Settings</button>
 
                 
@@ -160,8 +212,6 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
     <script type="module" src="./scripts/game.js"></script>
 
 </body>
