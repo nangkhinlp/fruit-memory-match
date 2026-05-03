@@ -25,7 +25,6 @@ I wanted to make this project more well-rounded.
 - Used `@import` to integrate Normalize.css for cross-browser consistency
 
 **Development**
-The biggest hurdle was getting fetch and ES modules to play nicely together. Top-level `await` looks simple but the export bindings tripped me up — reassigning `fruits = data.fruits` inside the async function didn't propagate to the import, but `fruits.push(...)` did. Once that clicked, the rest fell into place. 
 - Storing just `errors` and `matches` in sessionStorage wasn't enough to actually resume a game — I needed the full board layout and a list of matched positions, which led to a `getCurrentState()` helper that snapshots the live game.
 
 ## Project Structure
